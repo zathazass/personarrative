@@ -1,0 +1,52 @@
+Functional layers in React (Enterprise-grade app)
+---
+
+View [Component]
+Renders HTML/React components
+
+Usecase [Custom Hook]
+Orchestrates the suer journey
+
+Repository [Custom Hook]
+Interacts with the application state
+
+Adapter [Pure function]
+Interacts with the network
+
+Service [Pure funtion]
+Handles business logic
+
+-------------------------------------------------------
+What is business logic?
+
+IF statements
+Logical control structures (eg. if-else, switch-case)
+Loops (eg. while, for, foreach, for..in, for..of)
+Data transformation, extraction, retrieval
+Side effects
+	API calls (eg. fetch, axios)
+	SDK usage (eg. apollo-client)
+	Browser storage (eg. local/sessionStorage, cookies)
+
+What is not business logic?
+
+Usage of react hooks (eg. useState, useEffect)
+Usage of state management (eg. React Query, Redux)
+JSX code
+
+...but what is it then? It's an Orchestrator
+(a code that integrates multiple functional layers together)
+
+The Black-box test in React
+ 
+Input(Test arrangement) ----------------> Output(Assertion)
+                         production  code
+
+----------------------------------------------------------
+React app testing pyramid
+---
+
+manual & exploratory tests
+end-to-end tests (critical user journeys) [cypress]
+integration tests (Critical/Minor user journeys) [cypress]
+unit tests (business logic) [jest]
